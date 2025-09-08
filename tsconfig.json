@@ -2,9 +2,10 @@
   "include": ["client/src/**/*", "shared/**/*", "server/**/*"],
   "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
   "compilerOptions": {
-    "module": "ESNext",  // Use ESNext for module compatibility
+  "module": "CommonJS",  // Use CommonJS for Node.js backend compatibility
     "moduleResolution": "node",  // Ensure Node.js style module resolution
-    "target": "ESNext",  // Use ESNext to allow modern JS features
+  "target": "ESNext",  // Use ESNext to allow modern JS features
+  "outDir": "./dist",  // Output compiled JS to dist folder
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
     "noEmit": false,  // Allow TypeScript to emit compiled files
@@ -13,7 +14,6 @@
     "jsx": "preserve",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "allowImportingTsExtensions": true,
     "baseUrl": ".",
     "types": ["node", "vite/client"],
     "paths": {
